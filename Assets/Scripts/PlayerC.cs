@@ -9,6 +9,7 @@ public class PlayerC : MonoBehaviour
     public EnemyC opponent;
     public bool turnFlag;
     public bool blocking;
+    private bool forwardanim; 
     public float z;
     public HealthBar healthBar;
     public Animator anim;
@@ -37,6 +38,28 @@ public class PlayerC : MonoBehaviour
         anim = GetComponent<Animator>();
     }
 
+
+    void JumpFinish(float i)
+    {
+        if (i == 1)
+        {
+            forwardanim = false;
+        }
+    }
+    void JumpStart()
+    {
+        forwardanim = true;
+    }
+    void OnAnimatorMove()
+    {
+        if (forwardanim )
+            {
+                Vector3 newPosition = transform.position;
+                newPosition.x += -5 * Time.deltaTime;
+                transform.position = newPosition;
+            JumpFinish(0);
+            }
+        }
     // Update is called once per frame
     void Update()
     {
