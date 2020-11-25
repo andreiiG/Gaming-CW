@@ -7441,6 +7441,66 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.z
+    path: PT_Medieval_Hips/PT_Medieval_Spine/PT_Medieval_Spine2/PT_Medieval_Spine3/PT_Medieval_RightShoulder/PT_Medieval_RightArm/PT_Medieval_RightForeArm/PT_Medieval_RightHand/PT_Medieval_RightHandRing1
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.y
+    path: PT_Medieval_Hips/PT_Medieval_Spine/PT_Medieval_Spine2/PT_Medieval_Spine3/PT_Medieval_RightShoulder/PT_Medieval_RightArm/PT_Medieval_RightForeArm/PT_Medieval_RightHand/PT_Medieval_RightHandRing1
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.x
+    path: PT_Medieval_Hips/PT_Medieval_Spine/PT_Medieval_Spine2/PT_Medieval_Spine3/PT_Medieval_RightShoulder/PT_Medieval_RightArm/PT_Medieval_RightForeArm/PT_Medieval_RightHand/PT_Medieval_RightHandRing1
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.z
+    path: PT_Medieval_Hips/PT_Medieval_Spine/PT_Medieval_Spine2/PT_Medieval_Spine3/PT_Medieval_LeftShoulder/PT_Medieval_LeftArm/PT_Medieval_LeftForeArm/PT_Medieval_LeftHand/PT_Medieval_LeftHandIndex1/PT_Medieval_LeftHandIndex2
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.y
+    path: PT_Medieval_Hips/PT_Medieval_Spine/PT_Medieval_Spine2/PT_Medieval_Spine3/PT_Medieval_LeftShoulder/PT_Medieval_LeftArm/PT_Medieval_LeftForeArm/PT_Medieval_LeftHand/PT_Medieval_LeftHandIndex1/PT_Medieval_LeftHandIndex2
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.x
+    path: PT_Medieval_Hips/PT_Medieval_Spine/PT_Medieval_Spine2/PT_Medieval_Spine3/PT_Medieval_LeftShoulder/PT_Medieval_LeftArm/PT_Medieval_LeftForeArm/PT_Medieval_LeftHand/PT_Medieval_LeftHandIndex1/PT_Medieval_LeftHandIndex2
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.z
     path: PT_Medieval_Hips/PT_Medieval_LeftUpLeg
     classID: 4
     script: {fileID: 0}
@@ -7462,6 +7522,126 @@ AnimationClip:
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.x
     path: PT_Medieval_Hips/PT_Medieval_LeftUpLeg
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.z
+    path: PT_Medieval_Hips/PT_Medieval_Spine/PT_Medieval_Spine2/PT_Medieval_Spine3/PT_Medieval_RightShoulder/PT_Medieval_RightArm/PT_Medieval_RightForeArm/PT_Medieval_RightHand/PT_Medieval_RightHandThumb1
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.y
+    path: PT_Medieval_Hips/PT_Medieval_Spine/PT_Medieval_Spine2/PT_Medieval_Spine3/PT_Medieval_RightShoulder/PT_Medieval_RightArm/PT_Medieval_RightForeArm/PT_Medieval_RightHand/PT_Medieval_RightHandThumb1
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.x
+    path: PT_Medieval_Hips/PT_Medieval_Spine/PT_Medieval_Spine2/PT_Medieval_Spine3/PT_Medieval_RightShoulder/PT_Medieval_RightArm/PT_Medieval_RightForeArm/PT_Medieval_RightHand/PT_Medieval_RightHandThumb1
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.z
+    path: PT_Medieval_Hips/PT_Medieval_Spine/PT_Medieval_Spine2/PT_Medieval_Spine3/PT_Medieval_LeftShoulder
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.y
+    path: PT_Medieval_Hips/PT_Medieval_Spine/PT_Medieval_Spine2/PT_Medieval_Spine3/PT_Medieval_LeftShoulder
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.x
+    path: PT_Medieval_Hips/PT_Medieval_Spine/PT_Medieval_Spine2/PT_Medieval_Spine3/PT_Medieval_LeftShoulder
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.z
+    path: PT_Medieval_Hips/PT_Medieval_Spine/PT_Medieval_Spine2/PT_Medieval_Spine3/PT_Medieval_LeftShoulder/PT_Medieval_LeftArm/PT_Medieval_LeftForeArm/PT_Medieval_LeftHand/PT_Medieval_LeftHandMiddle1
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.y
+    path: PT_Medieval_Hips/PT_Medieval_Spine/PT_Medieval_Spine2/PT_Medieval_Spine3/PT_Medieval_LeftShoulder/PT_Medieval_LeftArm/PT_Medieval_LeftForeArm/PT_Medieval_LeftHand/PT_Medieval_LeftHandMiddle1
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.x
+    path: PT_Medieval_Hips/PT_Medieval_Spine/PT_Medieval_Spine2/PT_Medieval_Spine3/PT_Medieval_LeftShoulder/PT_Medieval_LeftArm/PT_Medieval_LeftForeArm/PT_Medieval_LeftHand/PT_Medieval_LeftHandMiddle1
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.z
+    path: PT_Medieval_Hips/PT_Medieval_Spine/PT_Medieval_Spine2/PT_Medieval_Spine3/PT_Medieval_RightShoulder/PT_Medieval_RightArm/PT_Medieval_RightForeArm/PT_Medieval_RightHand/PT_Medieval_RightHandIndex1/PT_Medieval_RightHandIndex2
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.y
+    path: PT_Medieval_Hips/PT_Medieval_Spine/PT_Medieval_Spine2/PT_Medieval_Spine3/PT_Medieval_RightShoulder/PT_Medieval_RightArm/PT_Medieval_RightForeArm/PT_Medieval_RightHand/PT_Medieval_RightHandIndex1/PT_Medieval_RightHandIndex2
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.x
+    path: PT_Medieval_Hips/PT_Medieval_Spine/PT_Medieval_Spine2/PT_Medieval_Spine3/PT_Medieval_RightShoulder/PT_Medieval_RightArm/PT_Medieval_RightForeArm/PT_Medieval_RightHand/PT_Medieval_RightHandIndex1/PT_Medieval_RightHandIndex2
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -7501,96 +7681,6 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.z
-    path: PT_Medieval_Hips/PT_Medieval_RightUpLeg
-    classID: 4
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_LocalEulerAngles.y
-    path: PT_Medieval_Hips/PT_Medieval_RightUpLeg
-    classID: 4
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_LocalEulerAngles.x
-    path: PT_Medieval_Hips/PT_Medieval_RightUpLeg
-    classID: 4
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_LocalEulerAngles.z
-    path: PT_Medieval_Hips/PT_Medieval_LeftUpLeg/PT_Medieval_LeftLeg
-    classID: 4
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_LocalEulerAngles.y
-    path: PT_Medieval_Hips/PT_Medieval_LeftUpLeg/PT_Medieval_LeftLeg
-    classID: 4
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_LocalEulerAngles.x
-    path: PT_Medieval_Hips/PT_Medieval_LeftUpLeg/PT_Medieval_LeftLeg
-    classID: 4
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_LocalEulerAngles.z
-    path: PT_Medieval_Hips/PT_Medieval_Spine/PT_Medieval_Spine2/PT_Medieval_Spine3/PT_Medieval_LeftShoulder/PT_Medieval_LeftArm/PT_Medieval_LeftForeArm
-    classID: 4
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_LocalEulerAngles.y
-    path: PT_Medieval_Hips/PT_Medieval_Spine/PT_Medieval_Spine2/PT_Medieval_Spine3/PT_Medieval_LeftShoulder/PT_Medieval_LeftArm/PT_Medieval_LeftForeArm
-    classID: 4
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_LocalEulerAngles.x
-    path: PT_Medieval_Hips/PT_Medieval_Spine/PT_Medieval_Spine2/PT_Medieval_Spine3/PT_Medieval_LeftShoulder/PT_Medieval_LeftArm/PT_Medieval_LeftForeArm
-    classID: 4
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_LocalEulerAngles.z
     path: PT_Medieval_Hips/PT_Medieval_Spine/PT_Medieval_Spine2/PT_Medieval_Spine3/PT_Medieval_LeftShoulder/PT_Medieval_LeftArm/PT_Medieval_LeftForeArm/PT_Medieval_LeftHand/PT_Medieval_LeftHandPinky1
     classID: 4
     script: {fileID: 0}
@@ -7612,36 +7702,6 @@ AnimationClip:
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.x
     path: PT_Medieval_Hips/PT_Medieval_Spine/PT_Medieval_Spine2/PT_Medieval_Spine3/PT_Medieval_LeftShoulder/PT_Medieval_LeftArm/PT_Medieval_LeftForeArm/PT_Medieval_LeftHand/PT_Medieval_LeftHandPinky1
-    classID: 4
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_LocalEulerAngles.z
-    path: PT_Medieval_Hips/PT_Medieval_Spine/PT_Medieval_Spine2/PT_Medieval_Spine3/PT_Medieval_RightShoulder/PT_Medieval_RightArm/PT_Medieval_RightForeArm/PT_Medieval_RightHand/PT_Medieval_RightHandPinky1
-    classID: 4
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_LocalEulerAngles.y
-    path: PT_Medieval_Hips/PT_Medieval_Spine/PT_Medieval_Spine2/PT_Medieval_Spine3/PT_Medieval_RightShoulder/PT_Medieval_RightArm/PT_Medieval_RightForeArm/PT_Medieval_RightHand/PT_Medieval_RightHandPinky1
-    classID: 4
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_LocalEulerAngles.x
-    path: PT_Medieval_Hips/PT_Medieval_Spine/PT_Medieval_Spine2/PT_Medieval_Spine3/PT_Medieval_RightShoulder/PT_Medieval_RightArm/PT_Medieval_RightForeArm/PT_Medieval_RightHand/PT_Medieval_RightHandPinky1
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -7801,7 +7861,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.z
-    path: PT_Medieval_Hips/PT_Medieval_Spine/PT_Medieval_Spine2/PT_Medieval_Spine3/PT_Medieval_LeftShoulder/PT_Medieval_LeftArm/PT_Medieval_LeftForeArm/PT_Medieval_LeftHand/PT_Medieval_LeftHandThumb1/PT_Medieval_LeftHandThumb2/PT_Medieval_LeftHandThumb3
+    path: PT_Medieval_Hips/PT_Medieval_Spine/PT_Medieval_Spine2/PT_Medieval_Spine3/PT_Medieval_LeftShoulder/PT_Medieval_LeftArm/PT_Medieval_LeftForeArm
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -7811,7 +7871,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.y
-    path: PT_Medieval_Hips/PT_Medieval_Spine/PT_Medieval_Spine2/PT_Medieval_Spine3/PT_Medieval_LeftShoulder/PT_Medieval_LeftArm/PT_Medieval_LeftForeArm/PT_Medieval_LeftHand/PT_Medieval_LeftHandThumb1/PT_Medieval_LeftHandThumb2/PT_Medieval_LeftHandThumb3
+    path: PT_Medieval_Hips/PT_Medieval_Spine/PT_Medieval_Spine2/PT_Medieval_Spine3/PT_Medieval_LeftShoulder/PT_Medieval_LeftArm/PT_Medieval_LeftForeArm
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -7821,7 +7881,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.x
-    path: PT_Medieval_Hips/PT_Medieval_Spine/PT_Medieval_Spine2/PT_Medieval_Spine3/PT_Medieval_LeftShoulder/PT_Medieval_LeftArm/PT_Medieval_LeftForeArm/PT_Medieval_LeftHand/PT_Medieval_LeftHandThumb1/PT_Medieval_LeftHandThumb2/PT_Medieval_LeftHandThumb3
+    path: PT_Medieval_Hips/PT_Medieval_Spine/PT_Medieval_Spine2/PT_Medieval_Spine3/PT_Medieval_LeftShoulder/PT_Medieval_LeftArm/PT_Medieval_LeftForeArm
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -7831,7 +7891,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.z
-    path: PT_Medieval_Hips/PT_Medieval_Spine/PT_Medieval_Spine2/PT_Medieval_Spine3/PT_Medieval_RightCape
+    path: PT_Medieval_Hips/PT_Medieval_Spine/PT_Medieval_Spine2/PT_Medieval_Spine3/PT_Medieval_RightShoulder/PT_Medieval_RightArm/PT_Medieval_RightForeArm/PT_Medieval_RightHand/PT_Medieval_RightHandMiddle1
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -7841,7 +7901,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.y
-    path: PT_Medieval_Hips/PT_Medieval_Spine/PT_Medieval_Spine2/PT_Medieval_Spine3/PT_Medieval_RightCape
+    path: PT_Medieval_Hips/PT_Medieval_Spine/PT_Medieval_Spine2/PT_Medieval_Spine3/PT_Medieval_RightShoulder/PT_Medieval_RightArm/PT_Medieval_RightForeArm/PT_Medieval_RightHand/PT_Medieval_RightHandMiddle1
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -7851,7 +7911,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.x
-    path: PT_Medieval_Hips/PT_Medieval_Spine/PT_Medieval_Spine2/PT_Medieval_Spine3/PT_Medieval_RightCape
+    path: PT_Medieval_Hips/PT_Medieval_Spine/PT_Medieval_Spine2/PT_Medieval_Spine3/PT_Medieval_RightShoulder/PT_Medieval_RightArm/PT_Medieval_RightForeArm/PT_Medieval_RightHand/PT_Medieval_RightHandMiddle1
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -7861,7 +7921,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.z
-    path: PT_Medieval_Hips/PT_Medieval_Spine/PT_Medieval_Spine2/PT_Medieval_Spine3/PT_Medieval_LeftShoulder/PT_Medieval_LeftArm/PT_Medieval_LeftForeArm/PT_Medieval_LeftHand/PT_Medieval_LeftHandIndex1/PT_Medieval_LeftHandIndex2
+    path: PT_Medieval_Hips/PT_Medieval_Spine/PT_Medieval_Spine2/PT_Medieval_Spine3/PT_Medieval_RightShoulder/PT_Medieval_RightArm/PT_Medieval_RightForeArm/PT_Medieval_RightHand/PT_Medieval_RightHandPinky1
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -7871,7 +7931,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.y
-    path: PT_Medieval_Hips/PT_Medieval_Spine/PT_Medieval_Spine2/PT_Medieval_Spine3/PT_Medieval_LeftShoulder/PT_Medieval_LeftArm/PT_Medieval_LeftForeArm/PT_Medieval_LeftHand/PT_Medieval_LeftHandIndex1/PT_Medieval_LeftHandIndex2
+    path: PT_Medieval_Hips/PT_Medieval_Spine/PT_Medieval_Spine2/PT_Medieval_Spine3/PT_Medieval_RightShoulder/PT_Medieval_RightArm/PT_Medieval_RightForeArm/PT_Medieval_RightHand/PT_Medieval_RightHandPinky1
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -7881,7 +7941,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.x
-    path: PT_Medieval_Hips/PT_Medieval_Spine/PT_Medieval_Spine2/PT_Medieval_Spine3/PT_Medieval_LeftShoulder/PT_Medieval_LeftArm/PT_Medieval_LeftForeArm/PT_Medieval_LeftHand/PT_Medieval_LeftHandIndex1/PT_Medieval_LeftHandIndex2
+    path: PT_Medieval_Hips/PT_Medieval_Spine/PT_Medieval_Spine2/PT_Medieval_Spine3/PT_Medieval_RightShoulder/PT_Medieval_RightArm/PT_Medieval_RightForeArm/PT_Medieval_RightHand/PT_Medieval_RightHandPinky1
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -7921,7 +7981,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.z
-    path: PT_Medieval_Hips/PT_Medieval_Spine/PT_Medieval_Spine2/PT_Medieval_Spine3/PT_Medieval_RightShoulder/PT_Medieval_RightArm/PT_Medieval_RightForeArm/PT_Medieval_RightHand/PT_Medieval_RightHandRing1
+    path: PT_Medieval_Hips/PT_Medieval_LeftUpLeg/PT_Medieval_LeftLeg
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -7931,7 +7991,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.y
-    path: PT_Medieval_Hips/PT_Medieval_Spine/PT_Medieval_Spine2/PT_Medieval_Spine3/PT_Medieval_RightShoulder/PT_Medieval_RightArm/PT_Medieval_RightForeArm/PT_Medieval_RightHand/PT_Medieval_RightHandRing1
+    path: PT_Medieval_Hips/PT_Medieval_LeftUpLeg/PT_Medieval_LeftLeg
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -7941,7 +8001,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.x
-    path: PT_Medieval_Hips/PT_Medieval_Spine/PT_Medieval_Spine2/PT_Medieval_Spine3/PT_Medieval_RightShoulder/PT_Medieval_RightArm/PT_Medieval_RightForeArm/PT_Medieval_RightHand/PT_Medieval_RightHandRing1
+    path: PT_Medieval_Hips/PT_Medieval_LeftUpLeg/PT_Medieval_LeftLeg
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -7951,7 +8011,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.z
-    path: PT_Medieval_Hips/PT_Medieval_Spine/PT_Medieval_Spine2/PT_Medieval_Spine3/PT_Medieval_RightShoulder/PT_Medieval_RightArm/PT_Medieval_RightForeArm/PT_Medieval_RightHand/PT_Medieval_RightHandThumb1
+    path: PT_Medieval_Hips/PT_Medieval_RightUpLeg
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -7961,7 +8021,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.y
-    path: PT_Medieval_Hips/PT_Medieval_Spine/PT_Medieval_Spine2/PT_Medieval_Spine3/PT_Medieval_RightShoulder/PT_Medieval_RightArm/PT_Medieval_RightForeArm/PT_Medieval_RightHand/PT_Medieval_RightHandThumb1
+    path: PT_Medieval_Hips/PT_Medieval_RightUpLeg
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -7971,7 +8031,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.x
-    path: PT_Medieval_Hips/PT_Medieval_Spine/PT_Medieval_Spine2/PT_Medieval_Spine3/PT_Medieval_RightShoulder/PT_Medieval_RightArm/PT_Medieval_RightForeArm/PT_Medieval_RightHand/PT_Medieval_RightHandThumb1
+    path: PT_Medieval_Hips/PT_Medieval_RightUpLeg
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -8071,7 +8131,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.z
-    path: PT_Medieval_Hips/PT_Medieval_Spine/PT_Medieval_Spine2/PT_Medieval_Spine3/PT_Medieval_LeftShoulder
+    path: PT_Medieval_Hips/PT_Medieval_Spine/PT_Medieval_Spine2/PT_Medieval_Spine3/PT_Medieval_RightShoulder/PT_Medieval_RightArm
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -8081,7 +8141,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.y
-    path: PT_Medieval_Hips/PT_Medieval_Spine/PT_Medieval_Spine2/PT_Medieval_Spine3/PT_Medieval_LeftShoulder
+    path: PT_Medieval_Hips/PT_Medieval_Spine/PT_Medieval_Spine2/PT_Medieval_Spine3/PT_Medieval_RightShoulder/PT_Medieval_RightArm
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -8091,7 +8151,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.x
-    path: PT_Medieval_Hips/PT_Medieval_Spine/PT_Medieval_Spine2/PT_Medieval_Spine3/PT_Medieval_LeftShoulder
+    path: PT_Medieval_Hips/PT_Medieval_Spine/PT_Medieval_Spine2/PT_Medieval_Spine3/PT_Medieval_RightShoulder/PT_Medieval_RightArm
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -8101,7 +8161,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.z
-    path: PT_Medieval_Hips/PT_Medieval_Spine/PT_Medieval_Spine2/PT_Medieval_Spine3/PT_Medieval_LeftShoulder/PT_Medieval_LeftArm
+    path: PT_Medieval_Hips/PT_Medieval_Spine/PT_Medieval_Spine2/PT_Medieval_Spine3/PT_Medieval_LeftShoulder/PT_Medieval_LeftArm/PT_Medieval_LeftForeArm/PT_Medieval_LeftHand/PT_Medieval_LeftHandIndex1
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -8111,7 +8171,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.y
-    path: PT_Medieval_Hips/PT_Medieval_Spine/PT_Medieval_Spine2/PT_Medieval_Spine3/PT_Medieval_LeftShoulder/PT_Medieval_LeftArm
+    path: PT_Medieval_Hips/PT_Medieval_Spine/PT_Medieval_Spine2/PT_Medieval_Spine3/PT_Medieval_LeftShoulder/PT_Medieval_LeftArm/PT_Medieval_LeftForeArm/PT_Medieval_LeftHand/PT_Medieval_LeftHandIndex1
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -8121,7 +8181,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.x
-    path: PT_Medieval_Hips/PT_Medieval_Spine/PT_Medieval_Spine2/PT_Medieval_Spine3/PT_Medieval_LeftShoulder/PT_Medieval_LeftArm
+    path: PT_Medieval_Hips/PT_Medieval_Spine/PT_Medieval_Spine2/PT_Medieval_Spine3/PT_Medieval_LeftShoulder/PT_Medieval_LeftArm/PT_Medieval_LeftForeArm/PT_Medieval_LeftHand/PT_Medieval_LeftHandIndex1
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -8161,7 +8221,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.z
-    path: PT_Medieval_Hips/PT_Medieval_Spine/PT_Medieval_Spine2/PT_Medieval_Spine3/PT_Medieval_LeftShoulder/PT_Medieval_LeftArm/PT_Medieval_LeftForeArm/PT_Medieval_LeftHand/PT_Medieval_LeftHandMiddle1
+    path: PT_Medieval_Hips/PT_Medieval_Spine/PT_Medieval_Spine2/PT_Medieval_Spine3/PT_Medieval_LeftShoulder/PT_Medieval_LeftArm/PT_Medieval_LeftForeArm/PT_Medieval_LeftHand/PT_Medieval_LeftHandThumb1/PT_Medieval_LeftHandThumb2/PT_Medieval_LeftHandThumb3
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -8171,7 +8231,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.y
-    path: PT_Medieval_Hips/PT_Medieval_Spine/PT_Medieval_Spine2/PT_Medieval_Spine3/PT_Medieval_LeftShoulder/PT_Medieval_LeftArm/PT_Medieval_LeftForeArm/PT_Medieval_LeftHand/PT_Medieval_LeftHandMiddle1
+    path: PT_Medieval_Hips/PT_Medieval_Spine/PT_Medieval_Spine2/PT_Medieval_Spine3/PT_Medieval_LeftShoulder/PT_Medieval_LeftArm/PT_Medieval_LeftForeArm/PT_Medieval_LeftHand/PT_Medieval_LeftHandThumb1/PT_Medieval_LeftHandThumb2/PT_Medieval_LeftHandThumb3
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -8181,7 +8241,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.x
-    path: PT_Medieval_Hips/PT_Medieval_Spine/PT_Medieval_Spine2/PT_Medieval_Spine3/PT_Medieval_LeftShoulder/PT_Medieval_LeftArm/PT_Medieval_LeftForeArm/PT_Medieval_LeftHand/PT_Medieval_LeftHandMiddle1
+    path: PT_Medieval_Hips/PT_Medieval_Spine/PT_Medieval_Spine2/PT_Medieval_Spine3/PT_Medieval_LeftShoulder/PT_Medieval_LeftArm/PT_Medieval_LeftForeArm/PT_Medieval_LeftHand/PT_Medieval_LeftHandThumb1/PT_Medieval_LeftHandThumb2/PT_Medieval_LeftHandThumb3
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -8191,7 +8251,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.z
-    path: PT_Medieval_Hips/PT_Medieval_Spine/PT_Medieval_Spine2/PT_Medieval_Spine3/PT_Medieval_RightShoulder/PT_Medieval_RightArm/PT_Medieval_RightForeArm/PT_Medieval_RightHand/PT_Medieval_RightHandIndex1/PT_Medieval_RightHandIndex2
+    path: PT_Medieval_Hips/PT_Medieval_Spine/PT_Medieval_Spine2/PT_Medieval_Spine3/PT_Medieval_RightShoulder/PT_Medieval_RightArm/PT_Medieval_RightForeArm
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -8201,7 +8261,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.y
-    path: PT_Medieval_Hips/PT_Medieval_Spine/PT_Medieval_Spine2/PT_Medieval_Spine3/PT_Medieval_RightShoulder/PT_Medieval_RightArm/PT_Medieval_RightForeArm/PT_Medieval_RightHand/PT_Medieval_RightHandIndex1/PT_Medieval_RightHandIndex2
+    path: PT_Medieval_Hips/PT_Medieval_Spine/PT_Medieval_Spine2/PT_Medieval_Spine3/PT_Medieval_RightShoulder/PT_Medieval_RightArm/PT_Medieval_RightForeArm
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -8211,7 +8271,37 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.x
-    path: PT_Medieval_Hips/PT_Medieval_Spine/PT_Medieval_Spine2/PT_Medieval_Spine3/PT_Medieval_RightShoulder/PT_Medieval_RightArm/PT_Medieval_RightForeArm/PT_Medieval_RightHand/PT_Medieval_RightHandIndex1/PT_Medieval_RightHandIndex2
+    path: PT_Medieval_Hips/PT_Medieval_Spine/PT_Medieval_Spine2/PT_Medieval_Spine3/PT_Medieval_RightShoulder/PT_Medieval_RightArm/PT_Medieval_RightForeArm
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.z
+    path: PT_Medieval_Hips/PT_Medieval_Spine/PT_Medieval_Spine2/PT_Medieval_Spine3/PT_Medieval_RightCape
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.y
+    path: PT_Medieval_Hips/PT_Medieval_Spine/PT_Medieval_Spine2/PT_Medieval_Spine3/PT_Medieval_RightCape
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.x
+    path: PT_Medieval_Hips/PT_Medieval_Spine/PT_Medieval_Spine2/PT_Medieval_Spine3/PT_Medieval_RightCape
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -8281,7 +8371,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.z
-    path: PT_Medieval_Hips/PT_Medieval_Spine/PT_Medieval_Spine2/PT_Medieval_Spine3/PT_Medieval_RightShoulder/PT_Medieval_RightArm
+    path: PT_Medieval_Hips/PT_Medieval_Spine/PT_Medieval_Spine2/PT_Medieval_Spine3/PT_Medieval_LeftShoulder/PT_Medieval_LeftArm
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -8291,7 +8381,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.y
-    path: PT_Medieval_Hips/PT_Medieval_Spine/PT_Medieval_Spine2/PT_Medieval_Spine3/PT_Medieval_RightShoulder/PT_Medieval_RightArm
+    path: PT_Medieval_Hips/PT_Medieval_Spine/PT_Medieval_Spine2/PT_Medieval_Spine3/PT_Medieval_LeftShoulder/PT_Medieval_LeftArm
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -8301,97 +8391,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.x
-    path: PT_Medieval_Hips/PT_Medieval_Spine/PT_Medieval_Spine2/PT_Medieval_Spine3/PT_Medieval_RightShoulder/PT_Medieval_RightArm
-    classID: 4
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_LocalEulerAngles.z
-    path: PT_Medieval_Hips/PT_Medieval_Spine/PT_Medieval_Spine2/PT_Medieval_Spine3/PT_Medieval_RightShoulder/PT_Medieval_RightArm/PT_Medieval_RightForeArm
-    classID: 4
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_LocalEulerAngles.y
-    path: PT_Medieval_Hips/PT_Medieval_Spine/PT_Medieval_Spine2/PT_Medieval_Spine3/PT_Medieval_RightShoulder/PT_Medieval_RightArm/PT_Medieval_RightForeArm
-    classID: 4
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_LocalEulerAngles.x
-    path: PT_Medieval_Hips/PT_Medieval_Spine/PT_Medieval_Spine2/PT_Medieval_Spine3/PT_Medieval_RightShoulder/PT_Medieval_RightArm/PT_Medieval_RightForeArm
-    classID: 4
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_LocalEulerAngles.z
-    path: PT_Medieval_Hips/PT_Medieval_Spine/PT_Medieval_Spine2/PT_Medieval_Spine3/PT_Medieval_RightShoulder/PT_Medieval_RightArm/PT_Medieval_RightForeArm/PT_Medieval_RightHand/PT_Medieval_RightHandMiddle1
-    classID: 4
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_LocalEulerAngles.y
-    path: PT_Medieval_Hips/PT_Medieval_Spine/PT_Medieval_Spine2/PT_Medieval_Spine3/PT_Medieval_RightShoulder/PT_Medieval_RightArm/PT_Medieval_RightForeArm/PT_Medieval_RightHand/PT_Medieval_RightHandMiddle1
-    classID: 4
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_LocalEulerAngles.x
-    path: PT_Medieval_Hips/PT_Medieval_Spine/PT_Medieval_Spine2/PT_Medieval_Spine3/PT_Medieval_RightShoulder/PT_Medieval_RightArm/PT_Medieval_RightForeArm/PT_Medieval_RightHand/PT_Medieval_RightHandMiddle1
-    classID: 4
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_LocalEulerAngles.z
-    path: PT_Medieval_Hips/PT_Medieval_Spine/PT_Medieval_Spine2/PT_Medieval_Spine3/PT_Medieval_LeftShoulder/PT_Medieval_LeftArm/PT_Medieval_LeftForeArm/PT_Medieval_LeftHand/PT_Medieval_LeftHandIndex1
-    classID: 4
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_LocalEulerAngles.y
-    path: PT_Medieval_Hips/PT_Medieval_Spine/PT_Medieval_Spine2/PT_Medieval_Spine3/PT_Medieval_LeftShoulder/PT_Medieval_LeftArm/PT_Medieval_LeftForeArm/PT_Medieval_LeftHand/PT_Medieval_LeftHandIndex1
-    classID: 4
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_LocalEulerAngles.x
-    path: PT_Medieval_Hips/PT_Medieval_Spine/PT_Medieval_Spine2/PT_Medieval_Spine3/PT_Medieval_LeftShoulder/PT_Medieval_LeftArm/PT_Medieval_LeftForeArm/PT_Medieval_LeftHand/PT_Medieval_LeftHandIndex1
+    path: PT_Medieval_Hips/PT_Medieval_Spine/PT_Medieval_Spine2/PT_Medieval_Spine3/PT_Medieval_LeftShoulder/PT_Medieval_LeftArm
     classID: 4
     script: {fileID: 0}
   - curve:

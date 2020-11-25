@@ -14,6 +14,8 @@ public class PlayerC : MonoBehaviour
     public HealthBar healthBar;
     public Animator anim;
     private IEnumerator cor;
+    private int sign;
+    //public GameObject currentPrefabObject;
 
     public enum TurnState
     {
@@ -37,25 +39,25 @@ public class PlayerC : MonoBehaviour
         healthBar.setMaxHealth(player.maxHealth);
         anim = GetComponent<Animator>();
     }
-
-
     void JumpFinish(float i)
     {
         if (i == 1)
         {
             forwardanim = false;
+            Debug.Log("Haide ma");
         }
     }
-    void JumpStart()
+    void JumpForwardStart()
     {
         forwardanim = true;
+        Debug.Log("o data");
     }
     void OnAnimatorMove()
     {
-        if (forwardanim )
+        if (forwardanim)
             {
-                Vector3 newPosition = transform.position;
-                newPosition.x += -5 * Time.deltaTime;
+            Vector3 newPosition = transform.position;
+                newPosition.x += sign*5 * Time.deltaTime;
                 transform.position = newPosition;
             JumpFinish(0);
             }
@@ -78,14 +80,20 @@ public class PlayerC : MonoBehaviour
                 }
                 if (Input.GetKeyDown("w"))
                 {
+                    sign = 1;
                     cor = forward();
                     StartCoroutine(cor);
                 }
                 if (Input.GetKeyDown("s"))
                 {
-                    cor = backward();
+                    sign = -1;
+                    cor = backward(); 
                     StartCoroutine(cor);
                 }
+               /* if (Input.GetKeyDown("r")){
+                    cor = fireball();
+                    StartCoroutine(cor);
+                }*/
                 break;
 
             case (TurnState.BLOCKING):                
@@ -109,6 +117,7 @@ public class PlayerC : MonoBehaviour
 
             case (TurnState.DEAD):
                 anim.SetTrigger("Death");
+                SoundManager.PlaySound(SoundManager.Sound.Dead);
                 Debug.Log("Defeat");
                 break;
         }
@@ -119,15 +128,16 @@ public class PlayerC : MonoBehaviour
     }
     public void takeDamage(int value)
     {
+        SoundManager.PlaySound(SoundManager.Sound.EnemyHit);
         if (blocking) player.curHealth -= Mathf.Max(value - player.block - player.defense, 0);
         else player.curHealth -= Mathf.Max(value - player.defense);
         if (player.curHealth < 0) player.curHealth = 0;
         healthBar.setHealth(player.curHealth);
     }
-
     private IEnumerator attack(int dmg)
     {
         anim.SetTrigger("Attack");
+        SoundManager.PlaySound(SoundManager.Sound.PlayerAttack);
         yield return new WaitForSeconds(1);
         opponent.takeDamage(dmg);
         turnFlag = false;
@@ -159,6 +169,7 @@ public class PlayerC : MonoBehaviour
     private IEnumerator forward()
     {
         anim.SetTrigger("JumpForward");
+        SoundManager.PlaySound(SoundManager.Sound.PlayerJump);
         yield return new WaitForSeconds(1.5f);
         curState = TurnState.WAITING;
         anim.ResetTrigger("JumpForward");
@@ -168,11 +179,36 @@ public class PlayerC : MonoBehaviour
 
     private IEnumerator backward()
     {
-        anim.SetTrigger("JumpBackward");
+        SoundManager.PlaySound(SoundManager.Sound.PlayerJump);
+        anim.SetTrigger("JumpForward");
         yield return new WaitForSeconds(1.5f);
         curState = TurnState.WAITING;
-        anim.ResetTrigger("JumpBackward");
+        anim.ResetTrigger("JumpForward");
         turnFlag = false;
         opponent.setTurn();
     }
+    //test 
+   /* private IEnumerator fireball()
+    {
+        yield return new WaitForSeconds(1.5f);
+        Vector3 pos;
+            float yRot = transform.rotation.eulerAngles.y;
+            Vector3 forwardY = Quaternion.Euler(0.0f, yRot, 0.0f) * Vector3.forward;
+            Vector3 forward = transform.forward;
+            Vector3 right = transform.right;
+            Vector3 up = transform.up;
+            Quaternion rotation = Quaternion.identity;
+                // set the start point in front of the player a ways, rotated the same way as the player
+                pos = transform.position + (forwardY * 5.0f);
+                rotation = transform.rotation;
+                pos.y = 0.0f;
+        FireProjectileScript projectileScript = currentPrefabObject.GetComponentInChildren<FireProjectileScript>();
+        if (projectileScript != null)
+        {
+            // make sure we don't collide with other fire layers
+            projectileScript.ProjectileCollisionLayers &= (~UnityEngine.LayerMask.NameToLayer("FireLayer"));
+        }
+        currentPrefabObject.transform.position = pos;
+        currentPrefabObject.transform.rotation = rotation;
+    }*/
 }
