@@ -19,9 +19,7 @@ public class GameController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        turn = 0;
-        LevelReset(1);
-        playerController.SetTurn();
+        LevelReset(1);   
     }
 
     private void LevelReset(int level)
@@ -35,13 +33,12 @@ public class GameController : MonoBehaviour
             enemy.transform.position = new Vector3(25, 0, 0);
             enemyController = enemy.GetComponent<EnemyC>();
         }
-       // SetTurn();
+        turn = 1;
     }
 
     // Update is called once per frame
     void Update()
     {
-        //if (playerController.turnFlag == false && enemyController.turnFlag == false) SetTurn();
     }
 
     public void PlayerDamage(int value)
@@ -55,30 +52,30 @@ public class GameController : MonoBehaviour
 
     public void SetTurn()
     {
-        //if (turn == 2||turn==0)
-        //{
-        //    turn = 1;
-        //    Debug.Log("Turn 1");
-        //    playerController.SetTurn();
-        //}
-        //else
-        //{
-        //    turn = 2;
-        //    Debug.Log("Turn 2");
-        //    enemyController.SetTurn();
-        //}
+        if (turn == 2||turn==0)
+        {
+            turn = 1;
+            Debug.Log("Turn 1");
+            playerController.SetTurn();
+        }
+        else
+        {
+            turn = 2;
+            Debug.Log("Turn 2");
+            enemyController.SetTurn();
+        }
     }
 
     public float GetDistance()
     {
-        return enemy.transform.position.z - player.transform.position.z;
+        return enemy.transform.position.x - player.transform.position.x;
     }
     public float GetPWall()
     {
-        return player.transform.position.z - 50;
+        return player.transform.position.x - 50;
     }
     public float GetEWall()
     {
-        return 50 - enemy.transform.position.z;
+        return 50 - enemy.transform.position.x;
     }
 }

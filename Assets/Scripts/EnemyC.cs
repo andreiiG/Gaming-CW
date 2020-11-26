@@ -40,41 +40,39 @@ public class EnemyC : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        switch (curState)
-        {
-            case (TurnState.READY):
-                if (turnFlag == true)
-                {
-                    cor = attack(enemy.baseDamage + UnityEngine.Random.Range(0, enemy.varDamage));
-                    //cor = forward();
-                    StartCoroutine(cor);
-                }
-                break;
-            case (TurnState.BLOCKING):
-                if (turnFlag == true)
-                {
-                    cor = block2();
-                    StartCoroutine(cor);
-                }
-                break;
-
-            case (TurnState.WAITING):
-                if (turnFlag == true)
-                {
-                    if (enemy.curHealth <= 0) curState = TurnState.DEAD;
-                    else
+        if(turnFlag==true)
+            switch (curState)
+            {
+                case (TurnState.READY):
                     {
-                        curState = TurnState.READY;
+                        if(game.GetDistance()<=11f) cor = attack(enemy.baseDamage + UnityEngine.Random.Range(0, enemy.varDamage));
+                        else cor = forward();
+                        StartCoroutine(cor);
                     }
-                }
-                break;
+                    break;
+                case (TurnState.BLOCKING):
+                    {
+                        cor = block2();
+                        StartCoroutine(cor);
+                    }
+                    break;
 
-            case (TurnState.DEAD):
-                anim.SetTrigger("Death");
-                Debug.Log("Defeat");
-                break;
+                case (TurnState.WAITING):
+                    {
+                        if (enemy.curHealth <= 0) curState = TurnState.DEAD;
+                        else
+                        {
+                            curState = TurnState.READY;
+                        }
+                    }
+                    break;
+
+                case (TurnState.DEAD):
+                    anim.SetTrigger("Death");
+                    Debug.Log("Defeat");
+                    break;
+            }
         }
-    }
 
     public void SetTurn()
     {
@@ -91,20 +89,20 @@ public class EnemyC : MonoBehaviour
 
     private IEnumerator attack(int dmg)
     {
+        turnFlag = false;
         anim.SetTrigger("Attack");
         yield return new WaitForSeconds(1);
         game.PlayerDamage(dmg);
-        turnFlag = false;
         curState = TurnState.WAITING;
         anim.ResetTrigger("Attack");
-        SetOtherTurn();
+        game.SetTurn();
     }
 
     private IEnumerator block()
     {
+        turnFlag = false;
         anim.SetTrigger("Block");
         yield return new WaitForSeconds(1f);
-        turnFlag = false;
         curState = TurnState.BLOCKING;
         blocking = true;
         game.SetTurn();
@@ -122,21 +120,21 @@ public class EnemyC : MonoBehaviour
 
     private IEnumerator forward()
     {
+        turnFlag = false;
         anim.SetTrigger("JumpForward");
         yield return new WaitForSeconds(1.5f);
         curState = TurnState.WAITING;
         anim.ResetTrigger("JumpForward");
-        turnFlag = false;
         game.SetTurn();
     }
 
     private IEnumerator backward()
     {
+        turnFlag = false;
         anim.SetTrigger("JumpBackward");
         yield return new WaitForSeconds(1.5f);
         curState = TurnState.WAITING;
         anim.ResetTrigger("JumpBackward");
-        turnFlag = false;
         game.SetTurn();
     }
 
