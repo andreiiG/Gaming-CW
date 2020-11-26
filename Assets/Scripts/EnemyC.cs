@@ -5,13 +5,14 @@ using UnityEngine;
 public class EnemyC : MonoBehaviour
 {
     public Enemy enemy;
-    public PlayerC opponent;
+    public GameController game;
     public bool turnFlag;
     public bool blocking;
-    public float z;
     public HealthBar healthBar;
     public Animator anim;
+    private bool forwardanim;
     public IEnumerator cor;
+    private int sign;
 
     public enum TurnState
     {
@@ -28,10 +29,10 @@ public class EnemyC : MonoBehaviour
     void Start()
     {
         curState = TurnState.WAITING;
-        opponent = GameObject.Find("Player").GetComponent<PlayerC>();
+        game = GameObject.Find("GameAssets").GetComponent<GameController>();
         turnFlag = false;
         blocking = false;
-        z = GetComponent<Transform>().position.z;
+        sign = -1;
         healthBar.setMaxHealth(enemy.maxHealth);
         anim = GetComponent<Animator>();
     }
@@ -42,10 +43,13 @@ public class EnemyC : MonoBehaviour
         switch (curState)
         {
             case (TurnState.READY):
-                cor = forward();
-                StartCoroutine(cor);
+                if (turnFlag == true)
+                {
+                    cor = attack(enemy.baseDamage + UnityEngine.Random.Range(0, enemy.varDamage));
+                    //cor = forward();
+                    StartCoroutine(cor);
+                }
                 break;
-
             case (TurnState.BLOCKING):
                 if (turnFlag == true)
                 {
@@ -72,11 +76,12 @@ public class EnemyC : MonoBehaviour
         }
     }
 
-    public void setTurn()
+    public void SetTurn()
     {
+        Debug.Log("bye");
         turnFlag = true;
     }
-    public void takeDamage(int value)
+    public void TakeDamage(int value)
     {
         if (blocking) enemy.curHealth -= Mathf.Max(value - enemy.block - enemy.defense, 0);
         else enemy.curHealth -= Mathf.Max(value - enemy.defense);
@@ -88,11 +93,11 @@ public class EnemyC : MonoBehaviour
     {
         anim.SetTrigger("Attack");
         yield return new WaitForSeconds(1);
-        opponent.takeDamage(dmg);
+        game.PlayerDamage(dmg);
         turnFlag = false;
         curState = TurnState.WAITING;
         anim.ResetTrigger("Attack");
-        opponent.setTurn();
+        SetOtherTurn();
     }
 
     private IEnumerator block()
@@ -102,7 +107,7 @@ public class EnemyC : MonoBehaviour
         turnFlag = false;
         curState = TurnState.BLOCKING;
         blocking = true;
-        opponent.setTurn();
+        game.SetTurn();
     }
 
     private IEnumerator block2()
@@ -122,7 +127,7 @@ public class EnemyC : MonoBehaviour
         curState = TurnState.WAITING;
         anim.ResetTrigger("JumpForward");
         turnFlag = false;
-        opponent.setTurn();
+        game.SetTurn();
     }
 
     private IEnumerator backward()
@@ -132,6 +137,37 @@ public class EnemyC : MonoBehaviour
         curState = TurnState.WAITING;
         anim.ResetTrigger("JumpBackward");
         turnFlag = false;
-        opponent.setTurn();
+        game.SetTurn();
+    }
+
+    void JumpFinish(float i)
+    {
+        if (i == 1)
+        {
+            forwardanim = false;
+            Debug.Log("Haide ma");
+        }
+    }
+    void JumpForwardStart()
+    {
+        forwardanim = true;
+        Debug.Log("o data");
+    }
+    void OnAnimatorMove()
+    {
+        if (forwardanim)
+        {
+            Vector3 newPosition = transform.position;
+            newPosition.x += sign * 5 * Time.deltaTime;
+            transform.position = newPosition;
+            JumpFinish(0);
+        }
+    }
+
+    private void SetOtherTurn()
+    {
+        PlayerC player = GameObject.Find("Player(Clone)").GetComponent<PlayerC>();
+        turnFlag = false;
+        player.SetTurn();
     }
 }

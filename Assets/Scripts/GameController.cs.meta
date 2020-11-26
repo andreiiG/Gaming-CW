@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: d0ff04c99a82db346aad984c552be926
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - playerPrefab: {fileID: 1134080990858044838, guid: 02128069630afb1438e9deaae69d8a78,
+      type: 3}
+  - enemyPrefab: {fileID: 6063535323080491422, guid: 38ae65de1cae3a9489a64a043f23f2a1,
+      type: 3}
+  - enemy2Prefab: {fileID: 8045499911561905706, guid: d3a4a037bffae244c8ecbbc524a6b7a1,
+      type: 3}
+  - playerController: {instanceID: 0}
+  - enemyController: {instanceID: 0}
+  - player: {instanceID: 0}
+  - enemy: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

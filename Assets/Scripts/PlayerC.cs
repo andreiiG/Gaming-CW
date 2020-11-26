@@ -6,11 +6,10 @@ using UnityEngine;
 public class PlayerC : MonoBehaviour
 {
     public Player player;
-    public EnemyC opponent;
+    public GameController game;
     public bool turnFlag;
     public bool blocking;
     private bool forwardanim; 
-    public float z;
     public HealthBar healthBar;
     public Animator anim;
     private IEnumerator cor;
@@ -32,10 +31,10 @@ public class PlayerC : MonoBehaviour
     void Start()
     {
         curState = TurnState.READY;
-        opponent = GameObject.Find("Enemy").GetComponent<EnemyC>();
+        game = GameObject.Find("GameAssets").GetComponent<GameController>();
         turnFlag = true;
         blocking = false;
-        z = GetComponent<Transform>().position.z;
+        sign = 1;
         healthBar.setMaxHealth(player.maxHealth);
         anim = GetComponent<Animator>();
     }
@@ -68,7 +67,7 @@ public class PlayerC : MonoBehaviour
         switch (curState)
         {
             case (TurnState.READY):
-                if (Input.GetKeyDown("a")) //&&Mathf.Abs(z-opponent.z)<10
+                if (Input.GetKeyDown("a") && game.GetDistance() <= 10f)
                 {
                     cor = attack(player.baseDamage + UnityEngine.Random.Range(0, player.varDamage));
                     StartCoroutine(cor);
@@ -78,22 +77,20 @@ public class PlayerC : MonoBehaviour
                     cor = block();
                     StartCoroutine(cor);
                 }
-                if (Input.GetKeyDown("w"))
+                if (Input.GetKeyDown("w") && game.GetDistance() > 10f)
                 {
-                    sign = 1;
                     cor = forward();
                     StartCoroutine(cor);
                 }
-                if (Input.GetKeyDown("s"))
+                if (Input.GetKeyDown("s") && game.GetPWall() > 10f)
                 {
-                    sign = -1;
-                    cor = backward(); 
+                    cor = backward();
                     StartCoroutine(cor);
                 }
-               /* if (Input.GetKeyDown("r")){
-                    cor = fireball();
-                    StartCoroutine(cor);
-                }*/
+                /* if (Input.GetKeyDown("r")){
+                     cor = fireball();
+                     StartCoroutine(cor);
+                 }*/
                 break;
 
             case (TurnState.BLOCKING):                
@@ -122,11 +119,12 @@ public class PlayerC : MonoBehaviour
                 break;
         }
     }
-    public void setTurn()
+    public void SetTurn()
     {
+        Debug.Log("hi");
         turnFlag = true;
     }
-    public void takeDamage(int value)
+    public void TakeDamage(int value)
     {
         SoundManager.PlaySound(SoundManager.Sound.EnemyHit);
         if (blocking) player.curHealth -= Mathf.Max(value - player.block - player.defense, 0);
@@ -139,11 +137,12 @@ public class PlayerC : MonoBehaviour
         anim.SetTrigger("Attack");
         SoundManager.PlaySound(SoundManager.Sound.PlayerAttack);
         yield return new WaitForSeconds(1);
-        opponent.takeDamage(dmg);
+        game.EnemyDamage(dmg);
         turnFlag = false;
         curState = TurnState.WAITING;
         anim.ResetTrigger("Attack");
-        opponent.setTurn();
+        SetOtherTurn();
+        Debug.Log("Attack11");
     }
 
     private IEnumerator block()
@@ -153,7 +152,7 @@ public class PlayerC : MonoBehaviour
         turnFlag = false;
         curState = TurnState.BLOCKING;
         blocking = true;
-        opponent.setTurn();
+        game.SetTurn();
     }
 
     private IEnumerator block2()
@@ -174,7 +173,7 @@ public class PlayerC : MonoBehaviour
         curState = TurnState.WAITING;
         anim.ResetTrigger("JumpForward");
         turnFlag = false;
-        opponent.setTurn();
+        game.SetTurn();
     }
 
     private IEnumerator backward()
@@ -185,7 +184,7 @@ public class PlayerC : MonoBehaviour
         curState = TurnState.WAITING;
         anim.ResetTrigger("JumpForward");
         turnFlag = false;
-        opponent.setTurn();
+        game.SetTurn();
     }
     //test 
    /* private IEnumerator fireball()
@@ -211,4 +210,11 @@ public class PlayerC : MonoBehaviour
         currentPrefabObject.transform.position = pos;
         currentPrefabObject.transform.rotation = rotation;
     }*/
+
+    private void SetOtherTurn()
+    {
+        EnemyC enemy = GameObject.Find("Enemy(Clone)").GetComponent<EnemyC>();
+        turnFlag = false;
+        enemy.SetTurn();
+    }
 }
