@@ -14,7 +14,8 @@ public class PlayerC : MonoBehaviour
     public Animator anim;
     private IEnumerator cor;
     private int sign;
-    //public GameObject currentPrefabObject;
+    int level;
+    private int flag1;
 
     public enum TurnState
     {
@@ -37,19 +38,19 @@ public class PlayerC : MonoBehaviour
         sign = 1;
         healthBar.setMaxHealth(player.maxHealth);
         anim = GetComponent<Animator>();
+        level = game.GetLevel();
+        flag1 = 0;
     }
     void JumpFinish(float i)
     {
         if (i == 1)
         {
             forwardanim = false;
-            Debug.Log("Haide ma");
         }
     }
     void JumpForwardStart()
     {
         forwardanim = true;
-        Debug.Log("o data");
     }
     void OnAnimatorMove()
     {
@@ -64,7 +65,37 @@ public class PlayerC : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(turnFlag==true) switch (curState)
+        if (level == 0)
+        {
+            if (flag1 == 0 && Input.GetKeyDown("w"))
+            {
+                cor = forward();
+                StartCoroutine(cor);
+                flag1 = 1;
+            }
+            if (flag1 == 1 && Input.GetKeyDown("s"))
+            {
+                cor = backward();
+                StartCoroutine(cor);
+                cor = Vic();
+                StartCoroutine(cor);
+            }
+        }
+        else if (level == 1)
+        {
+            if (flag1 == 0 && Input.GetKeyDown("a") && game.GetDistance() <= 11f)
+            {
+                cor = attack(player.baseDamage + UnityEngine.Random.Range(0, player.varDamage));
+                StartCoroutine(cor);
+                flag1 = 1;
+            }
+            if (flag1 == 1 && Input.GetKeyDown("d"))
+            {
+                cor = block();
+                StartCoroutine(cor);
+            }
+        }
+        else if (turnFlag==true) switch (curState)
         {
             case (TurnState.READY):
                 if (Input.GetKeyDown("a") && game.GetDistance() <= 11f)
@@ -87,21 +118,24 @@ public class PlayerC : MonoBehaviour
                     cor = backward();
                     StartCoroutine(cor);
                 }
-                /* if (Input.GetKeyDown("r")){
-                     cor = fireball();
-                     StartCoroutine(cor);
-                 }*/
                 break;
 
             case (TurnState.BLOCKING):
                 {
-                    cor = block2();
-                    StartCoroutine(cor);
+                   if(turnFlag== true)
+                        {
+                            anim.ResetTrigger("Block");
+                            anim.ResetTrigger("Block2");
+                            if (player.curHealth <= 0) curState = TurnState.DEAD;
+                            else
+                            {
+                                curState = TurnState.READY;
+                            }
+                        }
                 }
                 break;
 
             case (TurnState.WAITING):
-                Debug.Log("Saloot");
                 {
                     if (player.curHealth <= 0) curState = TurnState.DEAD;
                     else
@@ -120,7 +154,6 @@ public class PlayerC : MonoBehaviour
     }
     public void SetTurn()
     {
-        Debug.Log("hi");
         if (player.curHealth <= 0) curState = TurnState.DEAD;
         else
         {
@@ -130,9 +163,16 @@ public class PlayerC : MonoBehaviour
     }
     public void TakeDamage(int value)
     {
-        SoundManager.PlaySound(SoundManager.Sound.EnemyHit);
-        if (blocking) player.curHealth -= Mathf.Max(value - player.block - player.defense, 0);
-        else player.curHealth -= Mathf.Max(value - player.defense);
+
+        if (blocking)
+        {
+            SoundManager.PlaySound(SoundManager.Sound.Block);
+            player.curHealth -= Mathf.Max(value - player.block - player.defense, 0);
+        }
+        else {
+            SoundManager.PlaySound(SoundManager.Sound.EnemyHit);
+            player.curHealth -= Mathf.Max(value - player.defense); 
+        }
         if (player.curHealth < 0) player.curHealth = 0;
         healthBar.setHealth(player.curHealth);
     }
@@ -141,12 +181,11 @@ public class PlayerC : MonoBehaviour
         turnFlag = false;
         anim.SetTrigger("Attack");
         SoundManager.PlaySound(SoundManager.Sound.PlayerAttack);
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(2f);
         game.EnemyDamage(dmg);
         curState = TurnState.WAITING;
         anim.ResetTrigger("Attack");
         game.SetTurn();
-        Debug.Log("Attack11");
     }
 
     private IEnumerator block()
@@ -156,24 +195,16 @@ public class PlayerC : MonoBehaviour
         yield return new WaitForSeconds(1f);
         curState = TurnState.BLOCKING;
         blocking = true;
-        game.SetTurn();
-    }
-
-    private IEnumerator block2()
-    {
         anim.SetTrigger("Block2");
-        yield return new WaitForSeconds(0.5f);
-        curState = TurnState.WAITING;
-        blocking = false;
-        anim.ResetTrigger("Block2");
-        anim.ResetTrigger("Block");
+        game.SetTurn();
     }
 
     private IEnumerator forward()
     {
+        sign = 1;
         turnFlag = false;
-        anim.SetTrigger("JumpForward");
         SoundManager.PlaySound(SoundManager.Sound.PlayerJump);
+        anim.SetTrigger("JumpForward");
         yield return new WaitForSeconds(2f);
         curState = TurnState.WAITING;
         anim.ResetTrigger("JumpForward");
@@ -182,43 +213,24 @@ public class PlayerC : MonoBehaviour
 
     private IEnumerator backward()
     {
+        sign = -1;
         turnFlag = false;
         SoundManager.PlaySound(SoundManager.Sound.PlayerJump);
         anim.SetTrigger("JumpForward");
-        yield return new WaitForSeconds(1.5f);
+        yield return new WaitForSeconds(2f);
         curState = TurnState.WAITING;
         anim.ResetTrigger("JumpForward");
         game.SetTurn();
     }
-    //test 
-   /* private IEnumerator fireball()
-    {
-        yield return new WaitForSeconds(1.5f);
-        Vector3 pos;
-            float yRot = transform.rotation.eulerAngles.y;
-            Vector3 forwardY = Quaternion.Euler(0.0f, yRot, 0.0f) * Vector3.forward;
-            Vector3 forward = transform.forward;
-            Vector3 right = transform.right;
-            Vector3 up = transform.up;
-            Quaternion rotation = Quaternion.identity;
-                // set the start point in front of the player a ways, rotated the same way as the player
-                pos = transform.position + (forwardY * 5.0f);
-                rotation = transform.rotation;
-                pos.y = 0.0f;
-        FireProjectileScript projectileScript = currentPrefabObject.GetComponentInChildren<FireProjectileScript>();
-        if (projectileScript != null)
-        {
-            // make sure we don't collide with other fire layers
-            projectileScript.ProjectileCollisionLayers &= (~UnityEngine.LayerMask.NameToLayer("FireLayer"));
-        }
-        currentPrefabObject.transform.position = pos;
-        currentPrefabObject.transform.rotation = rotation;
-    }*/
-
     private void SetOtherTurn()
     {
         EnemyC enemy = GameObject.Find("Enemy(Clone)").GetComponent<EnemyC>();
         turnFlag = false;
         enemy.SetTurn();
+    }
+    private IEnumerator Vic()
+    {
+        yield return new WaitForSeconds(3f);
+        game.Victory();
     }
 }

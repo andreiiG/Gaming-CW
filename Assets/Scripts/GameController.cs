@@ -15,17 +15,15 @@ public class GameController : MonoBehaviour
     public GameObject enemy;
 
     public int turn;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        LevelReset(1);   
-    }
+    public int level;
 
     private void LevelReset(int level)
     {
+        if (player != null) Destroy(player);
+        if (enemy != null) Destroy(enemy);
         player = Instantiate(playerPrefab) as GameObject;
-        player.transform.position = new Vector3(-25, 0, 0);
+        if (level == 1) player.transform.position = new Vector3(15, 0, 0);
+        else player.transform.position = new Vector3(-25, 0, 0);
         playerController = player.GetComponent<PlayerC>();
         if (level > 0)
         {
@@ -39,6 +37,7 @@ public class GameController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+  
     }
 
     public void PlayerDamage(int value)
@@ -52,17 +51,18 @@ public class GameController : MonoBehaviour
 
     public void SetTurn()
     {
-        if (turn == 2||turn==0)
+        if (level > 0)
         {
-            turn = 1;
-            Debug.Log("Turn 1");
-            playerController.SetTurn();
-        }
-        else
-        {
-            turn = 2;
-            Debug.Log("Turn 2");
-            enemyController.SetTurn();
+            if (turn == 2 || turn == 0)
+            {
+                turn = 1;
+                playerController.SetTurn();
+            }
+            else
+            {
+                turn = 2;
+                enemyController.SetTurn();
+            }
         }
     }
 
@@ -77,5 +77,25 @@ public class GameController : MonoBehaviour
     public float GetEWall()
     {
         return 50 - enemy.transform.position.x;
+    }
+
+    public int GetLevel()
+    {
+        return level;
+    }
+
+    public void Victory()
+    {
+        level++;
+        LevelReset(level);
+    }
+    public void Defeat()
+    {
+        //LevelReset(level);
+    }
+    public void Begin()
+    {
+        level = 0;
+        LevelReset(level);
     }
 }

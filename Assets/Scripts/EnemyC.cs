@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class EnemyC : MonoBehaviour
 {
@@ -13,6 +14,10 @@ public class EnemyC : MonoBehaviour
     private bool forwardanim;
     public IEnumerator cor;
     private int sign;
+    private int level;
+    private int flag1;
+    public Text text;
+
 
     public enum TurnState
     {
@@ -35,17 +40,39 @@ public class EnemyC : MonoBehaviour
         sign = -1;
         healthBar.setMaxHealth(enemy.maxHealth);
         anim = GetComponent<Animator>();
+        level = game.GetLevel();
+        flag1 = 0;
     }
 
     // Update is called once per frame
     void Update()
     {
         if(turnFlag==true)
-            switch (curState)
+            if (level == 1)
+            {
+                if (flag1 == 0)
+                {
+                    cor = attack(enemy.baseDamage + UnityEngine.Random.Range(0, enemy.varDamage));
+                    StartCoroutine(cor);
+                    flag1 = 1;
+                }
+                else
+                {
+                    cor = attack(enemy.baseDamage + UnityEngine.Random.Range(0, enemy.varDamage));
+                    StartCoroutine(cor);
+                    cor = Vic();
+                    StartCoroutine(cor);
+                }
+            }
+            else
+                switch (curState)
             {
                 case (TurnState.READY):
                     {
-                        if(game.GetDistance()<=11f) cor = attack(enemy.baseDamage + UnityEngine.Random.Range(0, enemy.varDamage));
+                        anim.ResetTrigger("Block");
+                        anim.ResetTrigger("Block2");
+                        if (game.GetDistance() <= 11f)
+                            cor = block();// cor = attack(enemy.baseDamage + UnityEngine.Random.Range(0, enemy.varDamage));
                         else cor = forward();
                         StartCoroutine(cor);
                     }
@@ -62,27 +89,36 @@ public class EnemyC : MonoBehaviour
                         if (enemy.curHealth <= 0) curState = TurnState.DEAD;
                         else
                         {
+                            anim.SetTrigger("Block2");
                             curState = TurnState.READY;
                         }
                     }
                     break;
 
                 case (TurnState.DEAD):
-                    anim.SetTrigger("Death");
-                    Debug.Log("Defeat");
+                    anim.SetTrigger("Dead");
+                    SoundManager.PlaySound(SoundManager.Sound.Dead);
+                    turnFlag = false;
+                        text.text = "YOU WON THE DEMO";
                     break;
             }
         }
 
     public void SetTurn()
     {
-        Debug.Log("bye");
         turnFlag = true;
     }
     public void TakeDamage(int value)
     {
-        if (blocking) enemy.curHealth -= Mathf.Max(value - enemy.block - enemy.defense, 0);
-        else enemy.curHealth -= Mathf.Max(value - enemy.defense);
+        if (blocking)
+        {
+            enemy.curHealth -= Mathf.Max(value - enemy.block - enemy.defense, 0);
+            SoundManager.PlaySound(SoundManager.Sound.Block);
+        }
+        else {
+            SoundManager.PlaySound(SoundManager.Sound.EnemyHit);
+            enemy.curHealth -= Mathf.Max(value - enemy.defense); 
+        }
         if (enemy.curHealth < 0) enemy.curHealth = 0;
         healthBar.setHealth(enemy.curHealth);
     }
@@ -91,7 +127,7 @@ public class EnemyC : MonoBehaviour
     {
         turnFlag = false;
         anim.SetTrigger("Attack");
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(2f);
         game.PlayerDamage(dmg);
         curState = TurnState.WAITING;
         anim.ResetTrigger("Attack");
@@ -102,7 +138,7 @@ public class EnemyC : MonoBehaviour
     {
         turnFlag = false;
         anim.SetTrigger("Block");
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(0.5f);
         curState = TurnState.BLOCKING;
         blocking = true;
         game.SetTurn();
@@ -110,31 +146,31 @@ public class EnemyC : MonoBehaviour
 
     private IEnumerator block2()
     {
-        anim.SetTrigger("Block2");
+
         yield return new WaitForSeconds(0.5f);
         curState = TurnState.WAITING;
         blocking = false;
-        anim.ResetTrigger("Block2");
-        anim.ResetTrigger("Block");
     }
 
     private IEnumerator forward()
     {
         turnFlag = false;
+        SoundManager.PlaySound(SoundManager.Sound.PlayerJump);
         anim.SetTrigger("JumpForward");
-        yield return new WaitForSeconds(1.5f);
-        curState = TurnState.WAITING;
+        yield return new WaitForSeconds(2f);
         anim.ResetTrigger("JumpForward");
+        curState = TurnState.WAITING;
         game.SetTurn();
     }
 
     private IEnumerator backward()
     {
         turnFlag = false;
+        SoundManager.PlaySound(SoundManager.Sound.PlayerJump);
         anim.SetTrigger("JumpBackward");
-        yield return new WaitForSeconds(1.5f);
-        curState = TurnState.WAITING;
+        yield return new WaitForSeconds(2f);
         anim.ResetTrigger("JumpBackward");
+        curState = TurnState.WAITING;
         game.SetTurn();
     }
 
@@ -143,13 +179,12 @@ public class EnemyC : MonoBehaviour
         if (i == 1)
         {
             forwardanim = false;
-            Debug.Log("Haide ma");
         }
     }
-    void JumpForwardStart()
+    void JumpForwardStart(float i)
     {
-        forwardanim = true;
-        Debug.Log("o data");
+            forwardanim = true;
+
     }
     void OnAnimatorMove()
     {
@@ -167,5 +202,11 @@ public class EnemyC : MonoBehaviour
         PlayerC player = GameObject.Find("Player(Clone)").GetComponent<PlayerC>();
         turnFlag = false;
         player.SetTurn();
+    }
+    private IEnumerator Vic()
+    {
+        yield return new WaitForSeconds(3f);
+        Debug.Log("You win !");
+        game.Victory();
     }
 }
