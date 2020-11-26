@@ -152,7 +152,7 @@ namespace DigitalRuby.PyroParticles
             Vector3 right = transform.right;
             Vector3 up = transform.up;
             Quaternion rotation = Quaternion.identity;
-            currentPrefabObject = GameObject.Instantiate(Prefabs[currentPrefabIndex]);
+            currentPrefabObject = GameObject.Instantiate(Prefabs);
             currentPrefabScript = currentPrefabObject.GetComponent<FireConstantBaseScript>();
 
             if (currentPrefabScript == null)
